@@ -16,3 +16,5 @@ let a = prompt('What is the name of the one recently watched movie?', ''),
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 console.log(personalMovieDB);
+
+//good
