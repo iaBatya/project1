@@ -1,8 +1,17 @@
 
-const category = 'toys';
 
-console.log(`https://someurl.com/${category}/5`);
+let numberOfFilms = +prompt('How many films did you watch?', '');
+let movieName = prompt('What is the name of the one recently watched movie?');
+let movieRate = prompt('How can you rate this movie?');
 
-const user = 'Ivan';
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies: {
+        movieName: movieRate,
+    },
+    actors: {},
+    genres: [],
+    privat: false,
+};
 
-alert(`Hi, ${user}`);
+console.log(personalMovieDB.count,personalMovieDB.movies);
