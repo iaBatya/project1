@@ -1,17 +1,18 @@
-
-
-let numberOfFilms = +prompt('How many films did you watch?', '');
-let movieName = prompt('What is the name of the one recently watched movie?');
-let movieRate = prompt('How can you rate this movie?');
+let numberOfFilms = prompt('How many films did you watch?', '');
 
 let personalMovieDB = {
     count: numberOfFilms,
-    movies: {
-        movieName: movieRate,
-    },
+    movies: {},
     actors: {},
     genres: [],
     privat: false,
 };
 
-console.log(personalMovieDB.count,personalMovieDB.movies);
+let a = prompt('What is the name of the one recently watched movie?', ''),
+    b = prompt('How can you rate this movie?', ''),
+    c = prompt('What is the name of the one recently watched movie?', ''),
+    d = prompt('How can you rate this movie?', '');
+
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
