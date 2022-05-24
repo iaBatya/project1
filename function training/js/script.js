@@ -25,13 +25,22 @@ function showMyDB (a) {
 
 showMyDB(personalMovieDB);
 
-let genres = [1, 2, 3];
-
-function writeYourGenres () {
-    genres = [prompt('What is your first favorite genre?'), prompt('What is your second favorite genre?'), prompt('What is your third favorite genre?')];
-    console.log(genres);
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt('What is your ' + `${i}` + ' favorite genre?');
+        personalMovieDB.genres[i - 1] = genre;
+    }
 }
+
 writeYourGenres();
+
+// function writeYourGenres () {
+//     personalMovieDB.genres = [prompt('What is your first favorite genre?'), prompt('What is your second favorite genre?'), prompt('What is your third favorite genre?')];
+//     console.log(personalMovieDB.genres);
+// }
+// writeYourGenres();
+
+
 
 function remebmerMyFilms() {
     for (let i = 0; i < 2; i++) {
