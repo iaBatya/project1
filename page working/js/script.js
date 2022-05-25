@@ -24,6 +24,48 @@ const movieDB = {
     ]
 };
 
-const adds = document.getElementsByClassName('.promo_adv');
+movieDB.movies.sort();
 
-console.log(adds);
+const adds = document.querySelectorAll('.promo__adv');
+adds.forEach(item => {
+    item.remove();
+});
+
+const genre = document.querySelector('.promo__genre');
+console.log(genre);
+genre.innerHTML = 'ДРАМА';
+
+const bgImg = document.querySelector('.promo__bg');
+console.log(bgImg);
+bgImg.style.backgroundImage = "url('../img/bg.jpg')";
+
+let films = document.querySelectorAll('.promo__interactive-item');
+films = movieDB.movies;
+
+console.log(films);
+
+
+
+// films.forEach(item => {
+//     item = movieDB.movies;
+// });
+
+// for (let i = 0; i < films.length; i++) {
+//     films[i].textContent = movieDB.movies;
+// }
+
+// const adds = document.getElementsByClassName('promo__adv');
+// const img = document.getElementsByClassName('addimg');
+// console.log(img);
+// const img1 = document.getElementById('img1');
+// console.log(img1);
+// img1.remove();
+
+
+// img.remove();
+
+// console.log(adds);
+// adds.remove();
+
+
+
