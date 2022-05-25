@@ -17,6 +17,16 @@ let personalMovieDB = {
     privat: false,
 };
 
+function toggleVisibleMyDB() {
+    if (personalMovieDB.privat === false) {
+        personalMovieDB.privat = true;
+    } else if (personalMovieDB.privat === true) {
+        personalMovieDB.privat = false;
+    }
+}
+
+toggleVisibleMyDB();
+
 function showMyDB (a) {
     if (a.privat === false) {
         console.log(personalMovieDB);
@@ -27,8 +37,7 @@ showMyDB(personalMovieDB);
 
 function writeYourGenres() {
     for (let i = 1; i <= 3; i++) {
-        const genre = prompt('What is your ' + `${i}` + ' favorite genre?');
-        personalMovieDB.genres[i - 1] = genre;
+        personalMovieDB.genres[i - 1]  = prompt('What is your ' + `${i}` + ' favorite genre?');
     }
 }
 
